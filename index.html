@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SOLICITUD_DE_EMPLEO</title>
+    <!-- requiered meta tagas always come first -->
+
+    <script>
+        function iniciar() {
+            nombre1=document.getElementById("nombre");
+            nombre2=document.getElementById("apellido");
+            nombre1.addEventListener("input", vaildacion, false);
+            nombre2.addEventListener("input", validacion, false);
+            vaildacion();
+        }
+        function validacion() {
+            if(nombre1.value==''&&nombre2.value==''){
+                nombre1.setCustomValidity('inserte al menos un nombre');
+                nombre1.style.background='#FFDDDD';
+            }else{
+                nombre1.setCustomValidity('');
+                nombre1.style.background='#FFFFFF';
+            }
+        }
+        window.addEventListener("load",iniciar, false);
+    </script>
+    <style type="text/css">
+        body{
+            background: url(images/fondo.jpg) repeat 0 0;
+        }
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <! --Boostrap css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- agregamos css front awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<style>
+    .contenedor{
+        width: 500px;
+        border: solid 2px #b21f2d;
+    }
+    .img-ts{
+        width: 350px;
+        height: 350px;
+    }
+</style>
+<body>
+<div class="container">
+    <section class="container-fluid slider d-flex justify-content-center align-items-center">
+        <h1 class="text-primary">Solicitud de Empleo</h1>
+
+    </section>
+
+
+    <img src="images/image9.jpg" alt=""class="img-ts rounded float-xs-left">
+    <img src="images/image11.jpg" alt=""class="img-ts rounded float-xs-right">
+    <img src="images/image10.jpg" alt=""class="img-ts rounded float-xs-left">
+    <section class="container-fluid slider d-flex justify-content-center align-items-center">
+    </section>
+    <section class="container-fluid slider d-flex justify-content-center align-items-center">
+    <h2 class="text-danger">PARA APLICAR A UN PUESTO LABORAL POR FAVOR RELLENA LOS CAMPOS QUE HA CONTINUACION SE PRESENTAN EN LAS CASILLAS </h2>
+    </section>
+    <h5>Cuando acudimos a una empresa para realizar una entrevista de trabajo, antes de pasar a realizar la misma, puede que nos pidan que rellenemos una solicitud de empleo. Si es así, deberemos poner mucho cuidado y atención al hacerla, ya que será uno de los documentos que, junto con nuestro currículum y el resultado de la entrevista personal, formen parte de nuestra valoración como candidatos.</h5>
+    <h3 class="text-primary">Datos Personales</h3>
+        <form name="registracion" method="get">
+            <h6>Nombre:</h6>
+            <input type="text" name="nombre" id="nombre">
+            <h6>Apellido:</h6>
+            <input type="text" name="apellido" id="apellido">
+            <h6>No. DPI:</h6>
+            <input pattern ="[0-9]{13}" name ="DPI" id="DPI"
+                   title ="inserte correctamente los numeros de su DPI">
+            <h6>E-mail:</h6>
+            <input type="email" name="miemail" id="miemail" required>
+            <h6>Contrasenia</h6>
+            <input pattern ="[0-9]{8}" name ="contrasenia" id="contrasenia"
+                   title ="inserte correctamente la contrasenia proporcionada">
+
+           <form name="registracion" method="get">
+            <h6>Fecha de Nacimiento:</h6>
+            <input type="date"name="fecha" id="fecha">
+           </form>
+            <h6>Profesion:</h6>
+            <input type="text" name="profesion" id="profesion">
+            <h6>Estado Civil:</h6>
+            <input type="text" name="EstadoCivil" id="EstadoCivil">
+            <h6>Edad: </h6>
+            <input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+            <output id="rango"> 0 a 20</output>
+
+                <h3 class="text-primary">Datos Previos</h3>
+                <h6>Ingrese la hora de Solicitud</h6>
+                <input type="time"name="hora" id="hora">
+                <h6>Porque desea Obtener un Empleo?</h6>
+                <input type="search"name="Descripcion" id="descripcion" placeholder="escriba Brevemente">
+            <section class="container-fluid slider d-flex justify-content-center align-items-center">
+            <input type="submit" id="send" value="                  Enviar Solicitud                ">
+            </section>
+        </form>
+    <h1> </h1>
+    <img src="images/image7.jpg" alt=""class="img-ts rounded float-xs-left">
+    <img src="images/image8.jpg" alt=""class="img-ts rounded float-xs-right">
+    <img src="images/image12.jpg" alt=""class="img-ts rounded float-xs-left">
+    <section class="container-fluid slider d-flex justify-content-center align-items-center">
+        <h3 class="text-primary">Sus Datos estan bien protejidos con nuestras Aplicaciones... Gracias por preferirnos!!!</h3>
+    </section>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- jquery first, then Boostrap Js. -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
